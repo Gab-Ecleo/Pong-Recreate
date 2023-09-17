@@ -32,6 +32,11 @@ public class BallMovement : MonoBehaviour
             
     }
 
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        GameManager.gameOver = true;
+    }
+
     #endregion
 
     #region Methods
