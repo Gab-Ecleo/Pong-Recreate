@@ -22,6 +22,16 @@ public class BallMovement : MonoBehaviour
         LaunchBall();
     }
 
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Catcher"))
+        {
+            GameManager.pScore += 1;
+            Debug.Log("Player Scored");
+        }
+            
+    }
+
     #endregion
 
     #region Methods
